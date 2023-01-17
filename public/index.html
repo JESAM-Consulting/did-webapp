@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="DID.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta name="theme-color" content="#000000" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>DEUTSCHER IMMOBILIEN DIENST | Web</title>
+  </head>
+
+  <body>
+    <script
+      src="https://kit.fontawesome.com/b7ecb94de9.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script type="text/javascript">
+      function immonewsfeedListener(event) {
+        if (typeof event.data == "object") {
+          var immonewsfeedFrame = document.getElementById(
+            "wavepoint_immonewsfeed"
+          );
+
+          if (
+            event.data.action == "scrollTop" &&
+            immonewsfeedFrame.getBoundingClientRect
+          ) {
+            window.scrollTo(
+              0,
+              window.pageYOffset +
+                document
+                  .getElementById("wavepoint_immonewsfeed")
+                  .getBoundingClientRect().top
+            );
+          }
+          if (event.data.action == "setHeight") {
+            immonewsfeedFrame.height = event.data.documentHeight;
+          }
+        } else immonewsfeedFrame.height = event.data;
+      }
+
+      if (window.addEventListener) {
+        addEventListener("message", immonewsfeedListener, false);
+      } else {
+        attachEvent("onmessage", immonewsfeedListener);
+      }
+    </script>
+    <iframe
+      id="wavepoint_immonewsfeed"
+      style="display: block"
+      width="100%"
+      height="630"
+      frameborder="0"
+      scrolling="no"
+      src="https://www.immonewsfeed.de/frame.php?key=IHR_IMMONEWSFEED_KEY&anzahl=20&schriftgroesse=13&ueberschriftgroesse=21&ueberschriftfarbe=000&hintergrund=transparent&textfarbe=000&linkmouseover=1a1a1a&linkfarbe=1a1a1a&trennlinienfarbe=e1e1e1&font=open_sans&category=&extendet=&ci_color=&immo_key=&text_laenge=130&bildgroesse=medium&bildausrichtung=links&langer_text=&show_image=1&show_datum=1&show_line=1&show_kat=1&template=3"
+    ></iframe> -->
+
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>

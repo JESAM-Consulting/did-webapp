@@ -1,0 +1,62 @@
+@import '../../../styles/mixins/global.scss';
+
+.first-steper-content-alignment {
+    width: 356px;
+
+    @include breakpoint("max-sm") {
+        width: 100%;
+    }
+
+    .left-right-alignment {
+
+        button:last-child {
+            margin: 0;
+        }
+
+        button {
+            border: none;
+            cursor: pointer;
+            color: #fff;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            font-family: 'Inter', sans-serif;
+            width: 100%;
+            padding: 16px;
+            height: 64px;
+            background: #144337;
+            width: 100%;
+            margin: 0 0 18px 0;
+
+            @include breakpoint("max-sm") {
+                height: 50px;
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+    }
+
+    .section-title {
+        padding: 0 0 40px 0;
+
+        h3 {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            color: #000;
+            font-family: 'Inter', sans-serif;
+            text-align: center;
+            margin: 0 0 15px 0;
+        }
+
+        p {
+            font-weight: 400;
+            color: #000000;
+            text-align: center;
+            font-size: 14px;
+            font-family: 'Inter', sans-serif;
+
+            line-height: 17px;
+        }
+    }
+}

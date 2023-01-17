@@ -1,0 +1,626 @@
+@import "../../styles/mixins/global.scss";
+
+.kontact-first-information-content-alignment {
+    padding: 70px 0;
+
+    @include breakpoint("max-sm") {
+        padding: 10px 0 46px 0;
+    }
+
+    .page-title {
+        padding: 0 0 67px 0;
+
+        @include breakpoint("max-md") {
+            padding: 0 0 32px 0;
+        }
+
+        @include breakpoint("max-sm") {
+            padding: 30px 0 25px 30px;
+        }
+
+        h1 {
+            font-weight: 400;
+            font-size: 36px;
+            line-height: 36px;
+            color: #000;
+            @include no-font;
+
+            @include breakpoint("max-md") {
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 24px;
+            }
+
+            @include breakpoint("max-sm") {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 18px;
+            }
+        }
+    }
+
+    .two-col-grid {
+        display: grid;
+        grid-template-columns: 135px 200px;
+        gap: 200px;
+
+        @include breakpoint("max-sm") {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 40px;
+            padding: 0 30px;
+        }
+
+        .two-col-grid-items {
+            .icon-alignment {
+                @include flex-center;
+                gap: 20px;
+
+                img {
+                    cursor: pointer;
+                }
+            }
+
+            .follow-icon {
+                span {
+                    font-weight: 600;
+                    padding: 0 0 15px 0;
+                    font-size: 10px;
+                    line-height: 12px;
+                    font-family: "Montserrat", sans-serif;
+                    display: block;
+                    color: #184f3b;
+                }
+            }
+
+            .email-alignment {
+                padding: 0 0 17px 0;
+
+                span {
+                    font-weight: 600;
+                    font-size: 10px;
+                    line-height: 12px;
+                    padding: 0 0 15px 0;
+                    color: #184f3b;
+                    font-family: "Montserrat", sans-serif;
+                    display: block;
+                }
+
+                a {
+                    text-decoration-line: underline;
+                    font-weight: 400;
+                    font-size: 10px;
+                    color: #191f1d;
+                    display: block;
+                    cursor: pointer;
+                    line-height: 12px;
+                }
+            }
+
+            .whatsap-content-alignment {
+                @include flex-center;
+                gap: 5px;
+                padding: 0 0 17px 0;
+
+                div {
+                    @include flex-center;
+
+                    a {
+                        font-weight: 400;
+                        font-size: 10px;
+                        line-height: 12px;
+                        color: #191f1d;
+                        font-family: "Montserrat", sans-serif;
+                    }
+                }
+            }
+
+            .right-side-content {
+                padding: 0 0 6px 0;
+
+                span {
+                    font-weight: 600;
+                    font-size: 10px;
+                    line-height: 12px;
+                    color: #184f3b;
+                    font-family: "Montserrat", sans-serif;
+                    display: block;
+                    padding: 0 0 15px 0;
+                }
+
+                p {
+                    font-weight: 700;
+                    color: #191f1d;
+                    font-size: 10px;
+                    @include inter-font;
+                    line-height: 12px;
+                }
+            }
+
+            .left-side-content {
+                span {
+                    font-weight: 600;
+                    font-size: 10px;
+                    line-height: 12px;
+                    color: #184f3b;
+                    font-family: "Montserrat", sans-serif;
+                    display: block;
+                    padding: 0 0 15px 0;
+                }
+
+                p {
+                    font-weight: 400;
+                    font-family: "Montserrat", sans-serif;
+                    font-size: 10px;
+                    line-height: 12px;
+                    margin: 0 0 15px 0;
+                    color: #191f1d;
+
+                    @include breakpoint("max-sm") {
+                        max-width: 135px;
+                    }
+                }
+
+                button {
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 17px;
+                    border: 2px solid #255f50;
+                    @include inter-font;
+                    cursor: pointer;
+                    padding: 11px;
+                    color: #255f50;
+                    background-color: transparent;
+
+                    @include breakpoint("max-sm") {
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 17px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.kontact-main-form-content-alignment {
+    padding: 0 0 124px 0;
+
+    @include breakpoint("max-sm") {
+        padding: 0;
+    }
+
+    .kontact-form-design {
+        background: #d9d9d9;
+        padding: 90px;
+
+        @include breakpoint("max-sm") {
+            padding: 60px 30px;
+        }
+
+        input[type="checkbox"] + label {
+            display: block;
+            cursor: pointer;
+        }
+
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        input[type="checkbox"] + label:before {
+            content: "✔";
+            border: 1px solid #000000;
+            border-radius: 2px;
+            display: flex;
+            width: 20px;
+            height: 20px;
+            vertical-align: bottom;
+            color: transparent;
+            transition: 0.2s;
+            font-size: 10px !important;
+            justify-content: center;
+            align-items: center;
+
+            @include breakpoint("max-sm") {
+                width: 15px;
+                height: 15px;
+            }
+        }
+
+        input[type="checkbox"]:checked + label:before {
+            background-color: #000;
+            color: #fff;
+        }
+
+        input[type="checkbox"]:checked + label:after {
+            display: block;
+            position: absolute;
+            top: 11px;
+            left: 16px;
+            width: 4px;
+            height: 10px;
+            border: 1px solid none !important;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+
+        .black-button {
+            button {
+                border: none;
+                cursor: pointer;
+                @include inter-font;
+                padding: 11px 20px;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 17px;
+                color: #c1c1c1;
+                background: #000000;
+            }
+        }
+
+        .last-text-alignment {
+            @include flex-center;
+            position: relative;
+            padding: 30px 0 0 0;
+            gap: 13px;
+
+            @include breakpoint("max-sm") {
+                padding: 20px 0;
+            }
+
+            span {
+                font-weight: 400;
+                font-size: 10px;
+                line-height: 113.8%;
+                /* or 11px */
+                color: #8f8f8f;
+                @include inter-font;
+
+                @include breakpoint("max-sm") {
+                    font-weight: 400;
+                    font-size: 8px;
+                    max-width: 228px;
+                    line-height: 123.8%;
+                }
+            }
+        }
+
+        .first-checkbox-text-alignment {
+            @include flex-center;
+            justify-content: space-between;
+
+            @include breakpoint("max-sm") {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 10px;
+            }
+
+            .right-content {
+                @include flex-center;
+                gap: 30px;
+
+                input[type="radio"] + label {
+                    display: block;
+                    cursor: pointer;
+                }
+
+                input[type="radio"] {
+                    display: none;
+                }
+
+                input[type="radio"] + label:before {
+                    content: "✔";
+                    border: 1px solid #000000;
+                    border-radius: 2px;
+                    display: flex;
+                    width: 20px;
+                    height: 20px;
+                    vertical-align: bottom;
+                    color: transparent;
+                    transition: 0.2s;
+                    font-size: 10px !important;
+                    justify-content: center;
+                    align-items: center;
+
+                    @include breakpoint("max-sm") {
+                        width: 15px;
+                        height: 15px;
+                    }
+                }
+
+                input[type="radio"]:checked + label:before {
+                    background-color: #000;
+                    color: #fff;
+                }
+
+                input[type="radio"]:checked + label:after {
+                    display: block;
+                    position: absolute;
+                    top: 11px;
+                    left: 16px;
+                    width: 4px;
+                    height: 10px;
+                    border: 1px solid none !important;
+                    border-width: 0 2px 2px 0;
+                    transform: rotate(45deg);
+                }
+            }
+
+            .checkobx {
+                position: relative;
+                @include flex-center;
+                gap: 15px;
+
+                span {
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 83.8%;
+                    color: #000;
+                    display: block;
+
+                    @include breakpoint("max-sm") {
+                        font-weight: 400;
+                        font-size: 10px;
+                        line-height: 83.8%;
+                    }
+                }
+            }
+
+            .left-content {
+                span {
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 83.8%;
+                    @include inter-font;
+                    display: block;
+
+                    @include breakpoint("max-sm") {
+                        font-weight: 400;
+                        font-size: 10px;
+                        line-height: 83.8%;
+                    }
+                }
+            }
+        }
+
+        .input {
+            input {
+                width: 100%;
+                height: 30px;
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid #bcbcbc;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 83.8%;
+                color: #000;
+
+                @include breakpoint("max-sm") {
+                    font-weight: 400;
+                    height: 20px;
+                    font-size: 10px;
+                    line-height: 83.8%;
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            select {
+                width: 100%;
+                height: 30px;
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid #bcbcbc;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 83.8%;
+                color: #000;
+
+                @include breakpoint("max-sm") {
+                    font-weight: 400;
+                    font-size: 10px;
+                    height: 20px;
+                    line-height: 83.8%;
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            textarea {
+                width: 100%;
+                height: 186px;
+                background-color: transparent;
+                border: 1px solid #bcbcbc;
+                font-weight: 400;
+                font-size: 15px;
+                padding: 20px 16px;
+                line-height: 83.8%;
+                color: #000;
+
+                @include breakpoint("max-sm") {
+                    font-weight: 400;
+                    font-size: 10px;
+                    line-height: 83.8%;
+                    height: 96px;
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            ::placeholder {
+                @include inter-font;
+                color: #8f8f8f;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 83.8%;
+
+                @include breakpoint("max-sm") {
+                    font-weight: 400;
+                    font-size: 10px;
+                    line-height: 83.8%;
+                }
+            }
+        }
+
+        .two-col-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+            padding: 0 0 30px 0;
+
+            @include breakpoint("max-sm") {
+                grid-template-columns: repeat(1, 1fr);
+                gap: 20px;
+                padding: 0 0 20px 0;
+            }
+        }
+
+        .spacer-for-first-alignment {
+            padding: 30px 0 0 0;
+
+            @include breakpoint("max-sm") {
+                padding: 20px 0 0 0;
+            }
+        }
+
+        .select-text {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            padding: 30px 0;
+
+            &.select-text-first-step-content-alignment {
+                padding: 0 0 0 0;
+            }
+
+            &.select-text-new-grid-top-alignment {
+                padding: 30px 0 0 0;
+            }
+
+            @include breakpoint("max-sm") {
+                padding: 20px 0;
+                display: grid;
+                grid-template-columns: 35px 1fr;
+            }
+
+            &.select-text-new-grid {
+                @include breakpoint("max-sm") {
+                    display: grid;
+                    grid-template-columns: 110px 1fr;
+                    gap: 10px;
+                }
+            }
+
+            .input {
+                width: 288px;
+
+                @include breakpoint("max-sm") {
+                    width: 100%;
+                }
+            }
+
+            span {
+                display: block;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 83.8%;
+                color: #000;
+                @include inter-font;
+
+                @include breakpoint("max-sm") {
+                    font-weight: 400;
+                    font-size: 10px;
+                    line-height: 83.8%;
+                }
+            }
+        }
+
+        .tele {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+
+            .input {
+                width: 200px;
+            }
+
+            span {
+                display: block;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 83.8%;
+                color: #000;
+                @include inter-font;
+
+                @include breakpoint("max-sm") {
+                    font-weight: 400;
+                    font-size: 10px;
+                    line-height: 83.8%;
+                }
+            }
+        }
+
+        .email-bottom-alignment {
+            padding: 0 0 10px 0;
+
+            @include breakpoint("max-sm") {
+                padding: 0 0 20px 0;
+            }
+        }
+
+        .box-title {
+            padding: 0 0 30px 0;
+
+            h1 {
+                font-weight: 400;
+                font-size: 64px;
+                line-height: 83.8%;
+                color: #000;
+                @include no-font;
+                margin: 0 0 20px 0;
+
+                @include breakpoint("max-md") {
+                    font-size: 40px;
+                    line-height: 50px;
+                }
+
+                @include breakpoint("max-sm") {
+                    font-weight: 400;
+                    font-size: 32px;
+                    line-height: 83.8%;
+                }
+            }
+
+            h2 {
+                font-style: italic;
+                font-weight: 400;
+                font-size: 64px;
+                color: #000000;
+                font-family: "FreightTextProSemibold-Italic";
+                line-height: 92.7%;
+
+                @include breakpoint("max-md") {
+                    font-size: 40px;
+                    line-height: 50px;
+                }
+
+                @include breakpoint("max-sm") {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.kontact-backgrond-remove {
+    .container-md-5 {
+        @include breakpoint("max-sm") {
+            padding: 0;
+        }
+    }
+}

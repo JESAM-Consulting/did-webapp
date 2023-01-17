@@ -1,0 +1,21 @@
+@import '../../styles/mixins/global.scss';
+
+.steoper-progress-main {
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 10px;
+    height: 7px;
+    margin: 26px 0 0 0;
+    cursor: pointer;
+    position: relative;
+
+    .active-progress {
+        background: #144337;
+        border-radius: 10px 0px 0px 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        // width: 50%;
+        height: 100%;
+    }
+}

@@ -1,0 +1,100 @@
+@import '../../../styles/mixins/global.scss';
+
+.weiter-section-all-content-alignment {
+    padding: 126px 0 64px 0;
+    background: #191F1D;
+
+    @include breakpoint("max-sm") {
+        padding: 60px 0;
+    }
+
+    .button-right-content-alignment {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        button {
+            cursor: pointer;
+            background-color: transparent;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            color: #FFFFFF;
+            line-height: 17px;
+            padding: 11px 20px;
+            border: 2px solid #2F8158;
+
+        }
+    }
+
+    .image-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 0 0 60px 0;
+
+        @include breakpoint("max-md") {
+            grid-template-columns: repeat(2, 1fr);
+            padding: 0 0 40px 0;
+        }
+
+        @include breakpoint("max-sm") {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 10px;
+            padding: 0 0 40px 0;
+        }
+
+        img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+    }
+
+    .first-image {
+        padding: 0 0 10px 0;
+
+        img {
+            max-width: 547px;
+            height: 350px;
+            object-fit: cover;
+
+            @include breakpoint("max-sm") {
+                max-width: 100%;
+            }
+        }
+    }
+
+    .section-title {
+        padding: 0 0 91px 0;
+
+        @include breakpoint("max-sm") {
+            padding: 0 0 40px 0;
+        }
+
+        h1 {
+            font-weight: 400;
+            font-size: 64px;
+            line-height: 90%;
+            color: var(--white-color);
+            max-width: 591px;
+            @include no-font;
+
+            @include breakpoint("max-md") {
+                font-size: 40px;
+                line-height: 50px;
+            }
+
+            @include breakpoint("max-sm") {
+                font-weight: 400;
+                font-size: 32px;
+                line-height: 42px;
+            }
+
+            span {
+                font-family: "FreightTextProSemibold-Italic";
+                font-weight: 600;
+            }
+        }
+    }
+}

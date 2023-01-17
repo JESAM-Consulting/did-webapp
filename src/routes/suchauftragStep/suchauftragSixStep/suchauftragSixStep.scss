@@ -1,0 +1,72 @@
+@import '../../../styles/mixins/global.scss';
+
+.suchauftrag-siz-step-alignment {
+    width: 356px;
+
+    @include breakpoint("max-sm") {
+        width: 100%;
+    }
+
+    .button-design {
+        button {
+            @include common-button;
+            border-radius: 10px;
+        }
+    }
+
+    .input-design {
+        padding: 0 0 18px 0;
+
+        input {
+            width: 100%;
+            background: #FFFFFF;
+            border: 1px solid #C5C5C5;
+            border-radius: 10px;
+            font-family: 'Inter', sans-serif;
+            height: 64px;
+            padding: 0 30px;
+            font-weight: 400;
+            font-size: 20px;
+            text-align: center;
+            line-height: 24px;
+
+            @include breakpoint("max-sm") {
+                height: 50px;
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+            color: #474747;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        ::placeholder {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            font-family: 'Inter', sans-serif;
+            color: #474747;
+
+            @include breakpoint("max-sm") {
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+    }
+
+    .section-title {
+        padding: 0 0 18px 0;
+
+        p {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            color: #000;
+            text-align: center;
+            font-family: 'Inter', sans-serif;
+        }
+    }
+}

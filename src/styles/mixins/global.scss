@@ -1,0 +1,173 @@
+@import '../function/columns.scss';
+
+@import '../layout/container.scss';
+
+@import '../mixins/columns.scss';
+
+@import '../mixins/breakpoint.scss';
+
+@import '../mixins/index.scss';
+
+@import '../mixins/typography.scss';
+
+@import '../common-mixins/common-mixins.scss';
+
+@import '../button/button.scss';
+
+@import '../theme/theme.scss';
+
+@import '../form/form.scss';
+
+@import '../checkbox/checkbox.scss';
+
+html {
+    scroll-behavior: smooth;
+}
+
+.center-button-text-alignment-global-hero {
+    display: flex;
+    height: 100%;
+    padding-bottom: 86px;
+    position: relative;
+    z-index: 999;
+    align-items: flex-end;
+    cursor: pointer;
+    padding-left: 50px;
+
+    @include breakpoint("max-md") {
+        padding-bottom: 49px;
+        padding-left: 40px;
+    }
+
+    @include breakpoint("max-sm") {
+        padding-bottom: 28px;
+        padding-left: 0;
+        justify-content: center;
+    }
+
+    .page-arrow-alignment {
+        @include flex-center;
+        justify-content: center;
+
+        img {
+            max-width: 20px;
+            height: auto !important;
+        }
+    }
+
+    p {
+        font-weight: 600;
+        font-size: 10px;
+        line-height: 12px;
+        margin: 0 0 20px 0;
+        @include inter-font;
+        color: rgba(255, 255, 255, 0.8);
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.globally-error-message-style {
+    display: block;
+    color: red;
+    padding: 5px 0 0 0;
+    @include inter-font;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+textarea {
+    resize: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+
+// Zurück
+// Weiter
+.steper-globally-button-alignment {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 0 0 0;
+
+    button {
+        padding: 10px 24px;
+        background-color: transparent;
+        cursor: pointer;
+        font-family: "Inter", sans-serif;
+        border-radius: 4px;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 600;
+    }
+
+    button:first-child {
+        border: 1px solid var(--green-color);
+        color: var(--green-color);
+    }
+
+    button:last-child {
+        background-color: var(--green-color);
+        color: #fff;
+        border: 1px solid transparent;
+    }
+}
+
+.steper-right-button-alignment {
+    display: flex;
+    justify-content: flex-end;
+    padding: 25px 0 0 0;
+
+    button {
+        padding: 10px 24px;
+        background-color: transparent;
+        cursor: pointer;
+        font-family: "Inter", sans-serif;
+        border-radius: 4px;
+        font-size: 14px;
+        border: none;
+        line-height: 20px;
+        background-color: var(--green-color);
+        color: #fff;
+        font-weight: 600;
+    }
+}
+
+.steper-left-button-alignment {
+    display: flex;
+    justify-content: flex-start;
+    padding: 25px 0 0 0;
+
+    button {
+        padding: 10px 24px;
+        border: 1px solid var(--green-color);
+        cursor: pointer;
+        font-family: "Inter", sans-serif;
+        border-radius: 4px;
+        font-size: 14px;
+        line-height: 20px;
+        background-color: transparent;
+        color: var(--green-color);
+        font-weight: 600;
+    }
+}
+
+a {
+    cursor: pointer;
+}

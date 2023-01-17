@@ -1,0 +1,50 @@
+@import '../../../styles/mixins/global.scss';
+
+.seven-step-all-content-alignment {
+    width: 501px;
+    @include breakpoint("max-sm") {
+        width: 100%;
+    }
+
+    .section-title {
+        padding: 0 0 40px 0;
+
+        p {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            color: #000;
+            font-family: 'Inter', sans-serif;
+            text-align: center;
+        }
+    }
+
+    .left-right-alignment {
+        padding: 0 72px;
+
+        @include breakpoint("max-sm") {
+            padding: 0;
+        }
+
+        button {
+            border: none;
+            margin: 0 0 18px 0;
+            color: var(--white-color);
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 20px;
+            padding: 16px;
+            background: #144337;
+            height: 64px;
+            width: 100%;
+            line-height: 24px;
+
+
+            @include breakpoint("max-sm") {
+                height: 50px;
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+    }
+}

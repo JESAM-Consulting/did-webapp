@@ -1,0 +1,33 @@
+@use '../mixins/breakpoint.scss';
+
+
+// font-family: 'Barlow', sans-serif;
+
+// font-family: 'Inter', sans-serif;
+// font-family: 'Montserrat', sans-serif;
+
+
+@font-face {
+    font-family: "times-regular";
+    src: url("../../assets/fonts/times\ new\ roman.ttf");
+}
+
+@font-face {
+    font-family: "FreightTextProLight-Italic";
+    src: url("../../assets/fonts/FreightTextProLight-Italic.otf");
+}
+
+@font-face {
+    font-family: "FreightTextProSemibold-Italic";
+    src: url("../../assets/fonts/FreightTextProSemibold-Italic.otf");
+}
+
+@font-face {
+    font-family: "FreightTextProBook-Regular";
+    src: url("../../assets/fonts/FreightTextProBook-Regular.otf");
+}
+
+@font-face {
+    font-family: "FreightTextProBold-Italic";
+    src: url("../../assets/fonts/FreightTextProBold-Italic.otf");
+}

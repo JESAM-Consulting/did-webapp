@@ -1,0 +1,49 @@
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin grid {
+    display: grid;
+}
+
+@mixin text-center {
+    text-align: center;
+}
+
+@mixin block {
+    display: block;
+}
+
+@mixin pointer {
+    cursor: pointer;
+}
+
+@mixin no-font {
+    font-family: "FreightTextProBook-Regular";
+}
+
+@mixin common-button {
+    border: none;
+    color: var(--white-color);
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 16px;
+    background: #144337;
+    height: 64px;
+    width: 100%;
+    line-height: 24px;
+    font-family: 'Inter', sans-serif;
+
+    @include breakpoint("max-sm") {
+        height: 50px;
+        font-size: 14px;
+        line-height: 16px;
+        padding: 10px;
+    }
+}
+
+@mixin inter-font {
+    font-family: 'Inter', sans-serif;
+}

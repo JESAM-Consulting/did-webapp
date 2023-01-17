@@ -1,0 +1,43 @@
+@import '../../../styles/mixins/global.scss';
+
+.lizern-zpartner-first-step-content-alignment {
+    width: 356px;
+    @include breakpoint("max-sm") {
+        width: 100%;
+    }
+    .button-design {
+
+        button:last-child {
+            margin: 0;
+        }
+
+        button {
+            @include common-button;
+            margin: 0 0 18px 0;
+        }
+    }
+
+    .section-title {
+        padding: 0 0 40px 0;
+
+        p {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            color: #000000;
+            text-align: center;
+            margin: 0 0 15px 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        span {
+            font-weight: 400;
+            font-size: 14px;
+            color: #000000;
+            font-family: 'Inter', sans-serif;
+            display: block;
+            text-align: center;
+            line-height: 17px;
+        }
+    }
+}

@@ -1,0 +1,122 @@
+@import '../../styles/mixins/global.scss';
+
+.header-sticky {
+    position: sticky;
+    top: 0;
+    color: var(--white-color);
+    background-color: var(--white-color);
+    z-index: 99999;
+
+}
+
+.black-header-alignment {
+    @include flex-center;
+    justify-content: space-between;
+    padding: 22px 0;
+    height: 100px;
+
+    @include breakpoint("max-sm") {
+        height: auto;
+    }
+
+
+    .mobile-view-show-icon {
+        display: none;
+
+        @include breakpoint("max-md") {
+            display: block;
+        }
+    }
+
+    .logo {
+        img {
+            @include pointer;
+
+            @include breakpoint("max-sm") {
+                max-width: 94px;
+                height: 34px;
+            }
+        }
+    }
+
+    .logo {
+        .active {
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    .active {
+        &::before {
+            content: "";
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            bottom: -8px;
+            left: 0;
+            background-color: #000;
+        }
+    }
+
+    .sec-content-alignment {
+        @include flex-center;
+
+        .icon-alignment {
+            @include flex-center;
+            gap: 20px;
+
+            img {
+                @include pointer;
+            }
+        }
+
+        .menu {
+            @include flex-center;
+            gap: 48px;
+            padding-right: 48px;
+
+
+            @include breakpoint("max-md") {
+                display: none;
+            }
+
+            a {
+                @include pointer;
+                display: block;
+                color: #191F1D;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 19px;
+                font-family: 'Barlow', sans-serif;
+                font-style: italic;
+                position: relative;
+
+                &:hover {
+                    &::after {
+                        transform: scaleX(1);
+                        opacity: 1;
+                    }
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    height: 2px;
+                    width: 100%;
+                    bottom: -8px;
+                    left: 0;
+                    background-color: #000;
+                    -webkit-transform: scaleX(0);
+                    transform: scaleX(0);
+                    -webkit-transform-origin: left;
+                    transform-origin: left;
+                    opacity: 0;
+                    transition: opacity .3s ease-out, -webkit-transform .3s ease-out;
+                    transition: transform .3s ease-out, opacity .3s ease-out;
+                    transition: transform .3s ease-out, opacity .3s ease-out, -webkit-transform .3s ease-out;
+                }
+            }
+        }
+    }
+}

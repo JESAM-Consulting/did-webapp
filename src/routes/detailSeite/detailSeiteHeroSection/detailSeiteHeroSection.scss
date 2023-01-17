@@ -1,0 +1,292 @@
+@import '../../../styles/mixins/global.scss';
+
+.deails-seite-hero-section-content-alignment {
+    position: relative;
+
+    .content-top-alignment {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+
+        .col-grid {
+            display: grid;
+            grid-template-columns: 246px 285px;
+            gap: 0;
+
+            @include breakpoint("max-md") {
+                grid-template-columns: 157px 182px;
+                margin: 20px 0 0 145px;
+            }
+
+            @include breakpoint("max-sm") {
+                grid-template-columns: 146px 1fr;
+                margin: 0;
+            }
+
+            .col-grid-items {
+                padding: 18px;
+
+                span {
+                    font-weight: 600;
+                    font-size: 10px;
+                    color: #F9F9F9;
+                    display: block;
+                    padding: 0 0 8px 0;
+                    display: block;
+                    font-family: 'Montserrat', sans-serif;
+                    line-height: 12px;
+
+                    @include breakpoint("max-md") {
+                        font-weight: 600;
+                        font-size: 8px;
+                        line-height: 10px;
+                    }
+
+                    @include breakpoint("max-sm") {
+                        font-weight: 600;
+                        font-size: 8px;
+                        line-height: 10px;
+                    }
+                }
+
+                h4 {
+                    font-weight: 700;
+                    font-size: 24px;
+                    color: #F9F9F9;
+                    font-family: 'Advent Pro', sans-serif;
+                    line-height: 83.8%;
+
+                    @include breakpoint("max-md") {
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 83.8%;
+                    }
+
+                    @include breakpoint("max-sm") {
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 83.8%;
+                    }
+                }
+
+                h2 {
+                    font-weight: 400;
+                    font-size: 24px;
+                    color: #F9F9F9;
+                    @include no-font;
+                    line-height: 83.8%;
+
+                    @include breakpoint("max-sm") {
+                        font-size: 16px;
+                        line-height: 83.8%;
+                    }
+
+                    @include breakpoint("max-md") {
+                        font-size: 16px;
+                        line-height: 83.8%;
+                    }
+                }
+            }
+
+            .col-grid-items:nth-child(1) {
+                background: #255F50;
+            }
+
+            .col-grid-items:nth-child(2) {
+                background: #24AC86;
+            }
+        }
+
+        .white-box {
+            background-color: var(--white-color);
+            padding: 72px;
+            margin: 112px 0 100px 0;
+            max-width: 530px;
+
+            @include breakpoint("max-md") {
+                margin: 30px 0 0 145px;
+                padding: 40px;
+                max-width: 339px;
+            }
+
+            @include breakpoint("max-sm") {
+                padding: 43px 28px;
+                margin: 100px 0 26px 0;
+            }
+
+            h1 {
+                font-weight: 400;
+                font-size: 64px;
+                line-height: 64px;
+                color: #000000;
+                font-family: "FreightTextProBook-Regular";
+                margin: 0 0 9px 0;
+
+                @include breakpoint("max-md") {
+                    font-size: 40px;
+                    line-height: 50px;
+                }
+
+                @include breakpoint("max-sm") {
+                    font-weight: 400;
+                    font-size: 32px;
+                    line-height: 32px;
+                }
+            }
+
+            h6 {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 190.8%;
+                font-family: 'Inter', sans-serif;
+                color: #000000;
+
+                @include breakpoint("max-md") {
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 160.8%;
+                }
+
+                @include breakpoint("max-sm") {
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 160.8%;
+                }
+
+
+            }
+
+            h5 {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 190.8%;
+                font-family: 'Inter', sans-serif;
+                color: #000000;
+
+                @include breakpoint("max-md") {
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 160.8%;
+                }
+
+                @include breakpoint("max-sm") {
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 160.8%;
+                }
+
+                span {
+                    color: var(--green-color);
+                }
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 190.8%;
+                font-family: 'Inter', sans-serif;
+                color: #7E7E7E;
+
+                @include breakpoint("max-md") {
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 160.8%;
+                }
+
+                @include breakpoint("max-sm") {
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 160.8%;
+                }
+            }
+
+            button {
+                background: #0A2818;
+                border: none;
+                color: #fff;
+                margin: 40px 0 0 0;
+                padding: 11px 20px;
+                cursor: pointer;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 17px;
+                font-family: 'Inter', sans-serif;
+
+                @include breakpoint("max-md") {
+                    margin: 20px 0 0 0;
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 15px;
+                }
+
+                @include breakpoint("max-sm") {
+                    margin: 20px 0 0 0;
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 15px;
+                }
+            }
+        }
+    }
+
+    .grid {
+        height: 779px;
+        display: grid;
+        grid-template-columns: 505px 1fr;
+        gap: 0;
+
+        @include breakpoint("max-md") {
+            grid-template-columns: 250px 1fr;
+            height: 452px;
+        }
+
+        @include breakpoint("max-sm") {
+            grid-template-columns: repeat(1, 1fr);
+            height: auto;
+        }
+
+        .grid-items:nth-child(1) {
+            background: #D9D9D9;
+
+            @include breakpoint("max-sm") {
+                height: 264px;
+                margin-top: -4px;
+                order: 2;
+                display: none;
+            }
+        }
+
+        .grid-items:nth-child(2) {
+            @include breakpoint("max-sm") {
+                order: 1;
+            }
+        }
+
+        .grid-items {
+            height: 779px;
+
+            @include breakpoint("max-md") {
+                height: 452px;
+
+            }
+
+            @include breakpoint("max-sm") {
+                height: auto;
+            }
+
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+
+                @include breakpoint("max-sm") {
+                    height: 580px;
+                }
+            }
+        }
+    }
+}

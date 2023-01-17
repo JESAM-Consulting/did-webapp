@@ -1,0 +1,151 @@
+@import "../../../styles/mixins/global.scss";
+
+.immobilien-section-all-content-alignment {
+    background-image: url("../../../assets/images/Immobilien-img.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding: 130px 0 100px 0;
+    overflow-x: hidden;
+
+    @include breakpoint("max-sm") {
+        padding: 53px 0 63px 0;
+    }
+
+    .slick-dots li button:before {
+        color: #fff;
+    }
+
+    .slick-dots li.slick-active button:before {
+        opacity: 1;
+    }
+
+    .left-side-content-alignment {
+        padding-left: max(80px, calc((100vw - 1232px) / 2));
+
+        @include breakpoint("max-md") {
+            padding: 0 30px;
+        }
+
+        @include breakpoint("max-sm") {
+            padding: 0 30px;
+        }
+
+        .flex {
+            display: flex;
+            gap: 140px;
+
+            @include breakpoint("max-md") {
+                display: block;
+            }
+
+            @include breakpoint("max-sm") {
+                display: block;
+            }
+
+            .flex-items {
+                .text-style {
+                    p {
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 190.8%;
+                        color: var(--white-color);
+                        font-family: "Inter", sans-serif;
+                        max-width: 417px;
+                        margin: 0 0 30px 0;
+
+                        @include breakpoint("max-sm") {
+                            font-weight: 400;
+                            font-size: 12px;
+                            line-height: 190.8%;
+                            word-break: break-word;
+                            max-width: 100%;
+                        }
+                    }
+
+                    h4 {
+                        color: var(--white-color);
+                        font-weight: 400;
+                        font-size: 64px;
+                        line-height: 92.7%;
+                        font-family: "Barlow", sans-serif;
+                        margin: 0 0 30px 0;
+
+                        @include breakpoint("max-md") {
+                            font-size: 40px;
+                            line-height: 50px;
+                        }
+
+                        @include breakpoint("max-sm") {
+                            font-weight: 400;
+                            font-size: 40px;
+                            line-height: 101.8%;
+                            max-width: 250px;
+                        }
+
+                        span {
+                            font-family: "FreightTextProBook-Regular";
+                            font-weight: 600;
+                            font-style: italic;
+                        }
+                    }
+
+                    button {
+                        color: var(--white-color);
+                        background-color: transparent;
+                        @include pointer;
+                        padding: 11px 20px;
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 17px;
+                        font-family: "Inter", sans-serif;
+                        cursor: pointer;
+                        border: 2px solid var(--green-color);
+
+                        @include breakpoint("max-sm") {
+                            font-weight: 500;
+                            font-size: 12px;
+                            line-height: 15px;
+                            margin: 0 0 16px 0;
+                        }
+                    }
+
+                    .description-styleaa {
+                        margin-bottom: 20px;
+
+                        p {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+
+            .flex-items:nth-child(1) {
+                width: 423px;
+                min-width: 423px;
+
+                @include breakpoint("max-md") {
+                    width: 100%;
+                    min-width: 100%;
+                }
+
+                @include breakpoint("max-sm") {
+                    width: 100%;
+                    min-width: 100%;
+                }
+            }
+
+            .flex-items:nth-child(2) {
+                width: calc(100% - 423px);
+
+                @include breakpoint("max-md") {
+                    width: 100%;
+                }
+
+                @include breakpoint("max-sm") {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+@import '../../../styles/mixins/global.scss';
+
+.sec-steper-all-content-alignment {
+    width: 436px;
+
+    @include breakpoint("max-sm") {
+        width: 100%;
+    }
+
+    .section-title {
+        padding: 0 0 40px 0;
+
+        h4 {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            color: #000;
+            font-family: 'Inter', sans-serif;
+            text-align: center;
+        }
+    }
+
+    .left-right-content-alignment {
+        padding: 0 40px;
+
+        button:last-child {
+            margin: 0;
+        }
+
+        button {
+            border: none;
+            height: 64px;
+            width: 100%;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            color: #fff;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            margin: 0 0 18px 0;
+            background: #144337;
+
+
+            @include breakpoint("max-sm") {
+                height: 50px;
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+    }
+}

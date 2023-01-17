@@ -1,0 +1,131 @@
+@import "../../../styles/mixins/global.scss";
+
+.fakten-all-content-alignment {
+  padding: 117px 0 92px 0;
+
+  @include breakpoint("max-sm") {
+    padding: 85px 0 100px 0;
+  }
+
+  .fakten-heading-style-new {
+    padding: 0 0 96px 0;
+
+    @include breakpoint("max-sm") {
+      padding: 0 0 40px 0;
+    }
+    h1 {
+      font-weight: 400;
+      font-size: 64px;
+      line-height: 83.8%;
+      color: #000000;
+      font-family: "FreightTextProBook-Regular";
+      @include breakpoint("max-sm") {
+        font-size: 32px;
+        line-height: 83.8%;
+        margin: 0 0 20px 0;
+      }
+    }
+
+    h2 {
+      font-weight: 800;
+      font-size: 64px;
+      line-height: 83.8%;
+      color: #000000;
+      font-family: "FreightTextProSemibold-Italic";
+
+      @include breakpoint("max-sm") {
+        font-size: 32px;
+        line-height: 83.8%;
+      }
+    }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 223px 1fr;
+    gap: 0;
+
+    @include breakpoint("max-sm") {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 40px;
+    }
+
+    .grid-items:nth-child(1) {
+      border-right: 1px solid #bababa;
+
+      @include breakpoint("max-sm") {
+        border: none;
+      }
+    }
+
+    .grid-items {
+      .left-content-alignment {
+        padding-left: 69px;
+
+        @include breakpoint("max-sm") {
+          padding-left: 0px;
+        }
+
+        p {
+          font-weight: 300;
+          font-size: 17px;
+          line-height: 132.7%;
+          color: #767676;
+          margin: 0 0 3px 0;
+
+          @include breakpoint("max-sm") {
+            font-weight: 300;
+            font-size: 10px;
+            line-height: 132.7%;
+          }
+        }
+      }
+
+      span {
+        display: block;
+        font-weight: 300;
+        font-size: 24px;
+        margin: 0 0 45px 0;
+        cursor: pointer;
+        line-height: 92.7%;
+        color: #767676;
+        width: fit-content;
+        position: relative;
+        display: block;
+
+        @include breakpoint("max-sm") {
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 92.7%;
+          margin: 0 0 20px 0;
+        }
+
+        &:hover {
+          &::after {
+            transform: scaleX(1);
+            opacity: 1;
+          }
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          height: 2px;
+          width: 100%;
+          bottom: -8px;
+          left: 0;
+          background-color: #2f8158;
+          -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+          -webkit-transform-origin: left;
+          transform-origin: left;
+          opacity: 0;
+          transition: opacity 0.3s ease-out, -webkit-transform 0.3s ease-out;
+          transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+          transition: transform 0.3s ease-out, opacity 0.3s ease-out,
+            -webkit-transform 0.3s ease-out;
+        }
+      }
+    }
+  }
+}

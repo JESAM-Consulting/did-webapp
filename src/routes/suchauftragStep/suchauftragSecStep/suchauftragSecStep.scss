@@ -1,0 +1,93 @@
+@import '../../../styles/mixins/global.scss';
+
+.suchauftrag-sec-step-content-alignment {
+    width: 491px;
+
+    @include breakpoint("max-sm") {
+        width: 100%;
+    }
+
+    .section-title {
+        padding: 0 0 26px 0;
+
+        h1 {
+            font-weight: 700;
+            color: #000000;
+            text-align: center;
+            font-size: 24px;
+            line-height: 29px;
+        }
+    }
+
+    .left-right-contet-alignment {
+        margin: 0 67px;
+
+        @include breakpoint("max-sm") {
+            margin: 0;
+        }
+
+        .button-design {
+            button {
+                @include common-button;
+                border-radius: 10px;
+            }
+        }   
+
+        .p-location-align {
+            margin: 0 0 18px 0;
+
+        }
+
+        .location-alignment {
+            position: relative;
+
+            .location-icon {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 30px;
+                @include flex-center;
+            }
+
+            input {
+                width: 100%;
+                background: #FFFFFF;
+                border: 1px solid #C5C5C5;
+                padding-left: 60px;
+                padding-right: 30px;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 24px;
+                color: #474747;
+                border-radius: 10px;
+                height: 64px;
+                font-family: 'Inter', sans-serif;
+
+
+                @include breakpoint("max-sm") {
+                    height: 50px;
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            ::placeholder {
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 24px;
+                font-family: 'Inter', sans-serif;
+                color: #474747;
+
+                @include breakpoint("max-sm") {
+
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+}

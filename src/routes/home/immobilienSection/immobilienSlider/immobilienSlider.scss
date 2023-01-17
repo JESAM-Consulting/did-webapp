@@ -1,0 +1,208 @@
+@import "../../../../styles/mixins/global.scss";
+
+.immobilien-slider-section-alignment {
+    .slick-slide {
+        padding: 0 35px;
+
+        @include breakpoint("max-sm") {
+            padding: 0 10px;
+        }
+    }
+
+    .slick-track {
+        margin: 0 -35px;
+
+        @include breakpoint("max-sm") {
+            margin: 0 0;
+        }
+    }
+
+    .left-icon-alignment {
+        position: absolute;
+        bottom: -45px;
+        left: 46%;
+        transform: translateX(-50%);
+        z-index: 9999;
+        cursor: pointer;
+        @include breakpoint("max-sm") {
+            left: 41%;
+        }
+    }
+
+    .right-icon-alignment {
+        position: absolute;
+        z-index: 9999;
+        bottom: -45px;
+        right: 46%;
+        transform: translateX(-50%);
+        cursor: pointer;
+        z-index: 999;
+
+        @include breakpoint("max-sm") {
+            right: 38%;
+        }
+    }
+
+    .main-card {
+        background: var(--white-color);
+
+        .card-image {
+            img {
+                width: 100%;
+                height: 202px;
+                object-fit: cover;
+
+                @include breakpoint("max-sm") {
+                    height: 120px;
+                }
+            }
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 0;
+
+            @include breakpoint("max-sm") {
+                grid-template-columns: 112px 1fr;
+            }
+
+            .card-grid-items {
+                padding: 18px 20px;
+
+                @include breakpoint("max-md") {
+                    padding: 16px 18px;
+                }
+
+                @include breakpoint("max-sm") {
+                    padding: 16px 18px;
+                }
+
+                span {
+                    font-weight: 600;
+                    font-size: 10px;
+                    line-height: 12px;
+                    font-family: "Montserrat", sans-serif;
+                    color: var(--white-color);
+                    display: block;
+                    padding: 0 0 16px 0;
+
+                    @include breakpoint("max-md") {
+                        font-weight: 600;
+                        font-size: 7px;
+                        line-height: 9px;
+                        padding: 0 0 6px 0;
+                    }
+
+                    @include breakpoint("max-sm") {
+                        font-weight: 600;
+                        font-size: 7px;
+                        line-height: 9px;
+                        padding: 0 0 6px 0;
+                    }
+                }
+
+                p {
+                    font-weight: 400;
+                    font-size: 24px;
+                    line-height: 83.8%;
+                    color: var(--white-color);
+
+                    @include breakpoint("max-md") {
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 83.8%;
+                    }
+
+                    @include breakpoint("max-sm") {
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 83.8%;
+                    }
+                }
+            }
+
+            .card-grid-items:nth-child(1) {
+                background: #255f50;
+            }
+
+            .card-grid-items:nth-child(2) {
+                background: #24ac86;
+            }
+        }
+
+        .card-header {
+            background-color: var(--white-color);
+            padding: 37px 25px;
+
+            span {
+                font-family: "Montserrat", sans-serif;
+                font-weight: 600;
+                font-size: 10px;
+                display: block;
+                padding: 0 0 17px 0;
+                line-height: 12px;
+                letter-spacing: 0.18em;
+
+                @include breakpoint("max-md") {
+                    font-weight: 600;
+                    font-size: 8px;
+                    line-height: 10px;
+                    /* identical to box height */
+                    padding: 0 0 10px 0;
+                    letter-spacing: 0.18em;
+                }
+
+                @include breakpoint("max-sm") {
+                    font-weight: 600;
+                    font-size: 8px;
+                    line-height: 10px;
+                    /* identical to box height */
+                    padding: 0 0 10px 0;
+                    letter-spacing: 0.18em;
+                }
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 83.8%;
+                color: #000;
+                font-family: "FreightTextProBook-Regular";
+                margin: 0 0 11px 0;
+
+                @include breakpoint("max-md") {
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 83.8%;
+                }
+
+                @include breakpoint("max-sm") {
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 83.8%;
+                }
+            }
+
+            h6 {
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 92.7%;
+                color: #bcbcbc;
+                margin: 0;
+
+                @include breakpoint("max-md") {
+                    font-weight: 300;
+                    font-size: 12px;
+                    line-height: 92.7%;
+                }
+
+                @include breakpoint("max-sm") {
+                    font-weight: 300;
+                    font-size: 12px;
+                    line-height: 92.7%;
+                }
+            }
+        }
+    }
+}

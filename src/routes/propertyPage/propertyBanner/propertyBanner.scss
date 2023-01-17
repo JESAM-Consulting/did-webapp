@@ -1,0 +1,275 @@
+@import '../../../styles/mixins/global.scss';
+
+.property-new-hero-section-content-alignment {
+    position: relative;
+
+    .center-button-text-alignment {
+        display: flex;
+        height: 100%;
+        padding-bottom: 86px;
+        position: relative;
+        z-index: 999;
+        align-items: flex-end;
+        cursor: pointer;
+        padding-left: 50px;
+
+        @include breakpoint("max-sm") {
+            padding-bottom: 28px;
+            padding-left: 0;
+            justify-content: center;
+        }
+
+        .page-arrow-alignment {
+            @include flex-center;
+            justify-content: center;
+
+            img {
+                max-width: 20px;
+                height: auto !important;
+            }
+        }
+
+        p {
+            font-weight: 600;
+            font-size: 10px;
+            line-height: 12px;
+            margin: 0 0 20px 0;
+            @include inter-font;
+            color: rgba(255, 255, 255, 0.8);
+        }
+    }
+
+    .content-top-alignment {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+
+        .white-box {
+            background-color: var(--white-color);
+            padding: 72px 15px;
+            margin: 112px 0 0 0;
+            max-width: 635px;
+
+            @include breakpoint("max-md") {
+                margin: 20px 0 0 145px;
+                padding: 40px 65px;
+                max-width: 521px;
+            }
+
+            @include breakpoint("max-sm") {
+                margin: 77px 0 0 0;
+                padding: 20px 33px;
+            }
+
+            h1 {
+                font-weight: 400;
+                font-size: 64px;
+                line-height: 64px;
+                color: #000000;
+                font-family: "FreightTextProBook-Regular";
+
+                @include breakpoint("max-md") {
+                    font-size: 40px;
+                    line-height: 50px;
+                }
+
+                @include breakpoint("max-sm") {
+                    font-weight: 400;
+                    font-size: 32px;
+                    line-height: 32px;
+                }
+            }
+
+            h2 {
+                font-style: italic;
+                font-weight: 800;
+                font-size: 64px;
+                margin: 0 0 20px 0;
+                line-height: 92.7%;
+                font-family: "FreightTextProSemibold-Italic";
+                color: #000000;
+
+                @include breakpoint("max-md") {
+                    font-size: 40px;
+                    line-height: 50px;
+                }
+
+                @include breakpoint("max-sm") {
+                    font-weight: 400;
+                    font-size: 32px;
+                    line-height: 92.7%;
+                }
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 190.8%;
+                max-width: 400px;
+                color: #000000;
+                font-family: 'Inter', sans-serif;
+
+                @include breakpoint("max-md") {
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 190.8%;
+                }
+
+                @include breakpoint("max-sm") {
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 190.8%;
+                }
+            }
+
+            button {
+                border: 2px solid var(--green-color);
+                color: #000000;
+                background-color: transparent;
+                margin: 20px 0 0 0;
+                padding: 11px 20px;
+                cursor: pointer;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 17px;
+                font-family: 'Inter', sans-serif;
+
+                @include breakpoint("max-sm") {
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 15px;
+                }
+            }
+        }
+    }
+
+    .grid {
+        height: 779px;
+        display: grid;
+        grid-template-columns: 505px 1fr;
+        gap: 0;
+
+        @include breakpoint("max-md") {
+            grid-template-columns: 250px 1fr;
+            height: 451px;
+        }
+
+        @include breakpoint("max-sm") {
+            height: auto;
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .grid-items:nth-child(1) {
+            background: #191F1D;
+
+            @include breakpoint("max-sm") {
+                order: 2;
+                display: none;
+            }
+        }
+
+        .grid-items:nth-child(2) {
+            @include breakpoint("max-sm") {
+                order: 1;
+            }
+        }
+
+        .grid-items {
+            height: 779px;
+
+            @include breakpoint("max-md") {
+                height: 451px;
+            }
+
+            @include breakpoint("max-sm") {
+                height: 313px;
+            }
+
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+
+                @include breakpoint("max-sm") {
+                    height: 580px;
+                }
+            }
+        }
+    }
+}
+
+.verkauf-all-content-alignment-one {
+    padding: 72px 0 40px 0;
+
+    @include breakpoint("max-sm") {
+        padding: 54px 30px 20px 30px;
+    }
+
+    .text-grid {
+        display: grid;
+        grid-template-columns: 1fr 175px;
+        gap: 70px;
+
+        @include breakpoint("max-md") {
+            padding: 0 50px;
+        }
+
+        @include breakpoint("max-sm") {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 0;
+            padding: 0 0px;
+        }
+
+        .text-grid-items {
+            h2 {
+                font-family: 'Advent Pro', sans-serif;
+                font-weight: 500;
+                font-size: 36px;
+                line-height: 36px;
+                color: #000;
+
+                @include breakpoint("max-md") {
+                    font-size: 20px;
+                    line-height: 20px;
+                }
+
+                @include breakpoint("max-sm") {
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 20px;
+
+                }
+            }
+
+            span {
+                font-weight: 600;
+                @include no-font;
+            }
+        }
+
+        button {
+            border: none;
+            @include inter-font;
+            color: var(--white-color);
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 17px;
+            padding: 11px 20px;
+            background: #255F50;
+            width: 100%;
+
+            @include breakpoint("max-sm") {
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 17px;
+                width: auto;
+            }
+
+        }
+    }
+}

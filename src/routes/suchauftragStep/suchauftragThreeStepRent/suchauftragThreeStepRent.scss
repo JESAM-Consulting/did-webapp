@@ -1,0 +1,45 @@
+@import '../../../styles/mixins/global.scss';
+
+.Suchauftrag-three-step-all-content-alignment {
+    width: 415px;
+
+    @include breakpoint("max-sm") {
+        width: 100%;
+    }
+
+    .left-right-content-alignment {
+        padding: 0 30px;
+
+        button:last-child {
+            margin: 0;
+        }
+
+        button {
+            @include common-button;
+            margin: 0 0 8px 0;
+        }
+    }
+
+    .section-title {
+        padding: 0 0 15px 0;
+
+        h4 {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            color: #000;
+            margin: 0 0 15px 0;
+            font-family: 'Inter', sans-serif;
+            text-align: center;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            text-align: center;
+            font-family: 'Inter', sans-serif;
+            color: #000;
+        }
+    }
+}

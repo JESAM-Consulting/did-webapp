@@ -1,0 +1,10 @@
+@import '../../styles/mixins/global.scss';
+
+.contact-us {
+    padding: 146px 0 0 0;
+
+    @include breakpoint("max-sm") {
+        padding: 100px 0 0 0;
+    }
+
+}

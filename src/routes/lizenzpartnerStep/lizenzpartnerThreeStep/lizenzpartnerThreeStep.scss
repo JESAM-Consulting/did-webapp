@@ -1,0 +1,39 @@
+@import '../../../styles/mixins/global.scss';
+
+.lizenzpartner-three-step-all-content-alignment {
+    width: 486px;
+
+    @include breakpoint("max-sm") {
+        width: 100%;
+    }
+
+    .button-alignment {
+        padding: 0 65px;
+
+        @include breakpoint("max-sm") {
+            padding: 0;
+
+        }
+
+        button {
+            @include common-button;
+            margin: 0 0 18px 0;
+        }
+
+        button:last-child {
+            margin: 0;
+        }
+    }
+
+    .section-title {
+        padding: 0 0 40px 0;
+
+        p {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            color: #000000;
+            margin: 0;
+        }
+    }
+}

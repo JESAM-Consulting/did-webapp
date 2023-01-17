@@ -1,0 +1,71 @@
+@import "../../styles/mixins/global.scss";
+
+.impressum-all-content-alignment {
+  padding: 72px 0;
+
+  @include breakpoint("max-sm") {
+    padding: 40px 0;
+  }
+
+  h1 {
+    @include no-font;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 64px;
+    color: #000;
+    margin: 0 0 20px 0;
+  }
+
+  .same-text-style {
+    p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 190.8%;
+      @include inter-font;
+      color: #000;
+      margin: 0 0 6px 0;
+
+      @include breakpoint("max-sm") {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 190.8%;
+      }
+    }
+  }
+
+  .sec-same-text-style {
+    padding: 0 0 30px 0;
+
+    @include breakpoint("max-sm") {
+      padding: 0 0 20px 0;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 190.8%;
+      @include inter-font;
+      color: #000;
+      margin: 0 0 20px 0;
+      @include breakpoint("max-sm") {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 190.8%;
+        margin: 0 0 15px 0;
+      }
+    }
+    span {
+      display: block;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 190.8%;
+      @include inter-font;
+      color: #000;
+      @include breakpoint("max-sm") {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 190.8%;
+      }
+    }
+  }
+}

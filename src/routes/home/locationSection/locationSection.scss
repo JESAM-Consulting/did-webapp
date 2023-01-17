@@ -1,0 +1,74 @@
+@import '../../../styles/mixins/global.scss';
+
+.all-location-content-alignment {
+    .location-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0;
+
+        @include breakpoint("max-sm") {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .location-grid-items {
+            position: relative;
+            cursor: pointer;
+
+            .card-image {
+                img {
+                    width: 100%;
+                    height: 560px;
+                    object-fit: cover;
+                    object-position: center;
+
+                    @include breakpoint("max-md") {
+                        height: 323px;
+                    }
+
+                    @include breakpoint("max-sm") {
+                        height: 474px;
+                    }
+                }
+            }
+
+            .card-details {
+                background: rgba(11, 35, 27, 0.7);
+                position: absolute;
+                width: calc(100% - 0px);
+                bottom: 4px;
+                padding: 50px;
+                left: 0;
+
+                @include breakpoint("max-md") {
+                    padding: 30px 20px;
+                }
+
+                @include breakpoint("max-sm") {
+                    padding: 30px;
+                }
+
+                p {
+                    color: var(--white-color);
+                    font-weight: 400;
+                    text-align: center;
+                    font-family: "FreightTextProBook-Regular";
+                    font-size: 35px;
+                    line-height: 83.8%;
+                    margin: 0;
+
+                    @include breakpoint("max-md") {
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 83.8%;
+                    }
+
+                    @include breakpoint("max-sm") {
+                        font-weight: 400;
+                        font-size: 24px;
+                        line-height: 83.8%;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,194 @@
+// @use  '';
+@use "../mixins/breakpoint.scss" as bp;
+$bp: (
+  base: 0px,
+  sm: 540px,
+  md: 992px,
+  lg: 1280px,
+);
+
+@import '../mixins/breakpoint.scss';
+
+.container-md {
+  max-width: calc(1220px + 40px);
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @include breakpoint("max-md") {
+    padding: 0 26px;
+  }
+
+  @include breakpoint("max-md") {
+    padding: 0 26px;
+  }
+}
+
+.container-md-2 {
+  max-width: calc(1038px + 40px);
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @include breakpoint("max-md") {
+    padding: 0 26px;
+  }
+}
+
+.container-md-3 {
+  max-width: calc(1192px + 40px);
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @include breakpoint("max-md") {
+    padding: 0 26px;
+  }
+}
+
+.container-md-4 {
+  max-width: calc(880px + 40px);
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @include breakpoint("max-md") {
+    padding: 0 26px;
+  }
+}
+
+.container-md-5 {
+  max-width: calc(841px + 40px);
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @include breakpoint("max-md") {
+    padding: 0 26px;
+  }
+}
+
+.container-md-6 {
+  max-width: calc(940px + 40px);
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @include breakpoint("max-md") {
+    padding: 0 26px;
+  }
+}
+
+.container-md-7 {
+  max-width: calc(660px + 40px);
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @include breakpoint("max-md") {
+    padding: 0 26px;
+  }
+}
+
+.container-md-8 {
+  max-width: calc(955px + 40px);
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @include breakpoint("max-md") {
+    padding: 0 26px;
+  }
+}
+
+.container-md-9 {
+  max-width: calc(580px + 40px);
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @include breakpoint("max-md") {
+    padding: 0 26px;
+  }
+}
+
+.container-md-10 {
+  max-width: calc(824px + 40px);
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @include breakpoint("max-md") {
+    padding: 0 26px;
+  }
+}
+
+.container-md-11 {
+  max-width: calc(980px + 40px);
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @include breakpoint("max-md") {
+    padding: 0 26px;
+  }
+}
+
+.container-md-12 {
+  max-width: calc(1114px + 40px);
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @include breakpoint("max-md") {
+    padding: 0 26px;
+  }
+}
+
+.container-md-13 {
+  max-width: calc(1256px + 40px);
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @include breakpoint("max-md") {
+    padding: 0 26px;
+  }
+}
+
+.container-md-14 {
+  max-width: calc(909px + 40px);
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @include breakpoint("max-md") {
+    padding: 0 26px;
+  }
+}
+
+.container-md-15 {
+  max-width: calc(818px + 40px);
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @include breakpoint("max-md") {
+    padding: 0 26px;
+  }
+}
+
+.container-md-16 {
+  max-width: calc(1077px + 40px);
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @include breakpoint("max-md") {
+    padding: 0 26px;
+  }
+}
+
+.container-md-17 {
+  max-width: calc(1000px + 40px);
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @include breakpoint("max-md") {
+    padding: 0 26px;
+  }
+}
+
+.container-md-17 {
+  max-width: calc(1066px + 40px);
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @include breakpoint("max-md") {
+    padding: 0 26px;
+  }
+}

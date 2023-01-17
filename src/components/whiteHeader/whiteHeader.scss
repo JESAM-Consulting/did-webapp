@@ -1,0 +1,87 @@
+@import '../../styles/mixins/global.scss';
+
+.white-header-alignment {
+    @include flex-center;
+    justify-content: space-between;
+    color: var(--white-color);
+    padding: 26px 0 0 0;
+
+    .logo {
+        img {
+            @include pointer;
+
+            @include breakpoint("max-sm") {
+                max-width: 94px;
+                height: 34px;
+            }
+        }
+    }
+
+    .sec-content-alignment {
+        @include flex-center;
+
+        .icon-alignment {
+            @include flex-center;
+            gap: 20px;
+
+            img {
+                @include pointer;
+            }
+        }
+
+        .mobile-view-show-icon {
+            display: none;
+
+            @include breakpoint("max-md") {
+                display: block;
+            }
+        }
+
+        .menu {
+            @include flex-center;
+            gap: 48px;
+            padding-right: 48px;
+
+            @include breakpoint("max-md") {
+                display: none;
+            }
+
+            a {
+                @include pointer;
+                display: block;
+                color: var(--white-color);
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 19px;
+                font-family: 'Barlow', sans-serif;
+                font-style: italic;
+                position: relative;
+
+                &:hover {
+                    &::after {
+                        transform: scaleX(1);
+                        opacity: 1;
+                    }
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    height: 2px;
+                    width: 100%;
+                    bottom: -8px;
+                    left: 0;
+                    background-color: #fff;
+                    -webkit-transform: scaleX(0);
+                    transform: scaleX(0);
+                    -webkit-transform-origin: left;
+                    transform-origin: left;
+                    opacity: 0;
+                    transition: opacity .3s ease-out,-webkit-transform .3s ease-out;
+                    transition: transform .3s ease-out,opacity .3s ease-out;
+                    transition: transform .3s ease-out,opacity .3s ease-out,-webkit-transform .3s ease-out;
+                }
+            }
+        }
+    }
+}
