@@ -21,7 +21,7 @@
 
         .grid {
             display: grid;
-            grid-template-columns: 1fr 429px;
+            grid-template-columns: 1fr ;
             gap: 10px;
 
             @include breakpoint("max-sm") {
@@ -94,15 +94,15 @@
                     }
 
                 }
-
+                
                 p {
                     font-style: normal;
                     font-weight: 400;
-                    font-size: 16px;
-                    line-height: 151.8%;
+                    font-size: 20px;
+                    line-height: 113.8%;
                     color: var(--white-color);
                     font-family: 'Inter', sans-serif;
-                    max-width: 315px;
+                    max-width: 100%;
                     margin: 0;
 
                     @include breakpoint("max-sm") {
@@ -110,6 +110,9 @@
                         font-size: 11px;
                         line-height: 151.8%;
                     }
+                }
+                .colored-word{
+                    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5);
                 }
 
                 .location-right-alignment {
@@ -154,8 +157,8 @@
             }
 
             h2 {
-                font-family: "FreightTextProLight-Italic";
-                font-weight: 300;
+                font-family: "Inter";
+                font-weight:400;
                 font-size: 48px;
                 line-height: 49px;
                 color: var(--white-color);
